@@ -1,12 +1,7 @@
-import 'react-native-reanimated';
-// Import your global CSS file
-import '../global.css';
-
 import * as SplashScreen from 'expo-splash-screen';
 
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Stack } from 'expo-router';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import { useEffect } from 'react';
