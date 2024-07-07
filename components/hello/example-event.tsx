@@ -1,6 +1,8 @@
 import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React, { Component } from 'react';
 
+import { callHello } from '@/utils/libs';
+
 export default class ExampleEvent extends Component {
   constructor(props: {}) {
     super(props);
@@ -8,7 +10,7 @@ export default class ExampleEvent extends Component {
   }
 
   XL_Nhan() {
-    console.log('Phương thức tự định nghĩa');
+    callHello();
   }
 
   UNSAFE_componentWillMount() {

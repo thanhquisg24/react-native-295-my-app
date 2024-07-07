@@ -1,8 +1,8 @@
-import { Image, Platform, StyleSheet } from 'react-native';
+import { Image, StyleSheet } from 'react-native';
 
-import ExampleEvent from '@/components/hello/example-event';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
+import Sum2NumberV2 from '@/components/hello/sum2number/sum-2-number-v2';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
@@ -17,7 +17,7 @@ export default function HomeScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ExampleEvent />
+        <Sum2NumberV2 />
       </ThemedView>
     </ParallaxScrollView>
   );
