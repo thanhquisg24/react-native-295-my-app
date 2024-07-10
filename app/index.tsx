@@ -1,6 +1,8 @@
 import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 
+import SafeView from '@/components/layout/SafeView';
 import { ScreenOrientationProvider } from '@/context/screen-orientation-context';
+import { TextWind } from '@/components/nativewind-ex/test-component';
 import { UserView } from '@/components/04/user';
 
 // import { UserView } from '@/components/04/user';
@@ -24,10 +26,11 @@ export default function Login() {
   // const insets = useSafeAreaInsets();
 
   return (
-    <View className='flex-1 items-center justify-center bg-orange-600'>
-      <Text className='text-white font-bold text-4xl'>Open up App.js to start working on your app!</Text>
-      <StatusBar  />
-    </View>
+    // <TextWind />
+    <SafeView>
+      {/* <Text> aaaaaaaaa</Text> */}
+      <TextWind />
+    </SafeView>
   );
 }
 

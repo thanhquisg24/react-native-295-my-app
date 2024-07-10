@@ -1,6 +1,7 @@
 import * as SplashScreen from 'expo-splash-screen';
 
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-context';
 
 import { Stack } from 'expo-router';
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -48,21 +49,21 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      {/* <SafeAreaProvider> */}
-      <Stack>
-        <Stack.Screen
-          name='index'
-          options={{
-            title: 'Overview Login',
-            headerShown: false,
-            headerBackVisible: false,
-            headerBackButtonMenuEnabled: false,
-          }}
-        />
-        <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
-        <Stack.Screen name='+not-found' />
-      </Stack>
-      {/* </SafeAreaProvider> */}
+      <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+        <Stack>
+          <Stack.Screen
+            name='index'
+            options={{
+              title: 'Overview Login',
+              headerShown: false,
+              headerBackVisible: false,
+              headerBackButtonMenuEnabled: false,
+            }}
+          />
+          <Stack.Screen name='(tabs)' options={{ headerShown: false }} />
+          <Stack.Screen name='+not-found' />
+        </Stack>
+      </SafeAreaProvider>
     </ThemeProvider>
   );
 }
